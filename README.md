@@ -18,7 +18,7 @@ Depois de rodar `/guia-apple`:
 |---|---|---|---|
 | folha de filtros | lugares certos para parar ([Sheets](https://developer.apple.com/design/human-interface-guidelines/sheets)) | parava onde o dedo soltava | abre ou fecha pela posição e pela velocidade, numa mola. Um peteleco curto para baixo fecha |
 | folha, durante o arrasto | movimento que segue o gesto ([Motion](https://developer.apple.com/design/human-interface-guidelines/motion)) | andava 50 ms atrás do dedo | anda junto com o dedo |
-| ícones ♡ e ↗ | área de toque de pelo menos 44 ([Buttons](https://developer.apple.com/design/human-interface-guidelines/buttons)) | 28, com 4 px entre eles | o desenho ficou igual, o toque pega 44 |
+| ícones ♡ e ↗ | área de toque de pelo menos 44 pt ([Buttons](https://developer.apple.com/design/human-interface-guidelines/buttons)) | 28 px, com 4 px entre eles | o desenho ficou igual, o toque pega 44 px |
 | "45 min · fácil" | contraste de 4,5:1 ([Accessibility](https://developer.apple.com/design/human-interface-guidelines/accessibility)) | 2,05:1 | o mesmo cinza mais escuro, 4,54:1 |
 
 Ela abriu o site num navegador e arrastou de verdade: em 40 arrastos aleatórios a folha terminou aberta ou fechada em todos. O tamanho do texto da página inteira e o modo escuro ela deixou como pergunta, porque mexem no app todo.
@@ -49,7 +49,13 @@ Copie o conteúdo do `SKILL.md` e cole como primeira mensagem de uma conversa no
 
 ## Usar
 
-Abra o Claude Code na pasta do seu app e chame a skill:
+Abra o Claude Code na pasta do seu app. Na primeira vez, peça só o relatório: a skill olha o app inteiro e não muda nenhum arquivo.
+
+```text
+/guia-apple só olha, não muda nada
+```
+
+Quando quiser que ela corrija, peça antes ao Claude para guardar uma cópia do que você tem ("faz um commit antes"), para poder voltar atrás. Depois chame a skill:
 
 ```text
 /guia-apple
@@ -67,11 +73,7 @@ Ou peça do seu jeito:
 revisa meu app com o guia de design da Apple
 ```
 
-Para só conferir, sem mudar nenhum arquivo:
-
-```text
-/guia-apple só olha, não muda nada
-```
+Enquanto trabalha, ela abre as páginas do guia em developer.apple.com. No modo padrão, o Claude Code pede a sua permissão antes de abrir.
 
 ## O que ela devolve
 
@@ -113,4 +115,4 @@ A skill não copia o texto do guia: ela manda o Claude ler as páginas oficiais 
 
 ## Licença
 
-MIT. Veja o arquivo [LICENSE](LICENSE). A skill é do Felipe, [@ofelipemart](https://www.instagram.com/ofelipemart/) no Instagram.
+MIT. Veja o arquivo [LICENSE](LICENSE). A skill é do Felipe, [@ofelipemart](https://www.instagram.com/ofelipemart/) no Instagram e feBittar aqui no GitHub.
